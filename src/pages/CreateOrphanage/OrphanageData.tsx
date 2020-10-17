@@ -88,7 +88,7 @@ export default function OrphanageData() {
 
       <Text style={styles.label}>Fotos</Text>
 
-      <View styles={styles.uploadedImagesContainer}>
+      <View style={styles.uploadedImagesContainer}>
         {images.map(image => {
           return (
             <Image
