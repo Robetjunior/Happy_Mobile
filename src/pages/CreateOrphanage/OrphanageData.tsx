@@ -35,8 +35,26 @@ export default function OrphanageData() {
       about,
       instructions,
       open_on_weekends,
-
     })
+
+    const data = new FormData();
+
+    data.append('name', name);
+    data.append('about', about);
+    data.append('latitude', String(latitude));
+    data.append('longitude', String(longitude));
+    data.append('instructions', instructions);
+    data.append('opening_hours', opening_hours);
+    data.append('open_on_weekends', String(open_on_weekends));
+
+    images.forEach((image, index) => {
+      data.append('images', {
+        name: `image_${index}.jpg`,
+        type: 'images/jpg',
+        uri: image,
+      } as any)
+    })
+
   }
 
   async function handleSelectImages(){
