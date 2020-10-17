@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { RectButton } from 'react-native-gesture-handler';
 import MapView, { Marker } from 'react-native-maps';
 
-import mapMarkerImg from '../../images/map-marker.png';
+import mapMarkerImg from '../../images/map-marker3.png';
 
 export default function SelectMapPosition() {
   const navigation = useNavigation();
@@ -18,8 +18,8 @@ export default function SelectMapPosition() {
     <View style={styles.container}>
       <MapView 
         initialRegion={{
-          latitude: -27.2092052,
-          longitude: -49.6401092,
+          latitude: -23.5229859,
+          longitude: -46.6995142,
           latitudeDelta: 0.008,
           longitudeDelta: 0.008,
         }}
@@ -27,7 +27,7 @@ export default function SelectMapPosition() {
       >
         <Marker 
           icon={mapMarkerImg}
-          coordinate={{ latitude: -27.2092052, longitude: -49.6401092 }}
+          coordinate={{ latitude: -23.5229859, longitude: -46.6995142 }}
         />
       </MapView>
 
